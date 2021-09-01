@@ -1,22 +1,13 @@
-# Linguagem Utilizada para Desenvolver a Aplicação
 language: python
-
-# Versão que a aplicação suporta.
 python:
-  - "3.7"
-
-# Faz a instalação com Sudo, para ter privilégio de Super Usuário.
+- '3.7'
 sudo: required
-
-# Instalação de Módulos que são necessários para a Aplicação.
 install:
-  - pip install flask
-
-# Defini o script de Teste que deve rodar toda vez que o código for alterado.
+- pip install flask
 script:
-  - python test.py
-
-# Defini que o processo de Deploy será na Plataforma Heroku. É necessário informar o nome da APP criada no Heroku
+- python test.py
 deploy:
   provider: heroku
-  app: mudar_para_o_nome_de_sua_app_no_heroku
+  app: devops-pipelinetest
+  api_key:
+    secure: QipcU+7jniaJXPMH86L2xk3hi1q+gB4sp7vgGXxce6oj3VW5E3kL7+vLQhyw4LqUCpEnxwMAdSpdWz3PEms1lk2ucF9BQadfLqKxV2654SWHX2lQAiYmEAH4lxIFa0Up6/57CCDM+vttBd3ARIHp+jMgmOwpfoIR4CiZBxZTRkFWdIJHtJBhDodn27NBrzbn97POVmiY1ZY+1x/xkQEr2ug/5uLGyt9KBczaZo9/0Y44qTop37tSafSdT7rLtuBSmAhAvIE8gdUS0tkijPuut9KuJKL/Hm1Fo4mvR2Xxgq6myPfFtx+g5jt3KkWqx3apiGq0oHRfBUooOP8fCe2mzjPom/Xvg4myhQWUgvFe4RjQERQDWrQmFvBHUmswCW1GfXVPoa/e8kjEtG1tYVVoWMdLPYIHTXuvHEOagcVvnapM07Vsqse5QZFRjvT1NI33O2i0Qyin+zgRk+trtGCbKLjWTS349D1Zd/7K2tIfKWoNiY1uo5ptcomGw/FTosQVaDopVPM3z/zcFwAxi1926A5hrr/w3d3NwoaDe9wIiv19WlreN1NFJPhej1j+ylW9Q5V4mc0ULFscRGhWCwSCsN4eATR4/ESjvDr/OcjutKWh8QHt9pKGX5sXRw3IxHvCDASSdGTZEsa4BG60+TFafku8WOxeMValhSEqO2/9Bz8=
